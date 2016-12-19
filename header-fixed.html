@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Bricks & Mortar</title>
+
+	<link rel="stylesheet" href="assets/main.css">
+	<link rel="stylesheet" href="assets/header-fixed.css">
+	<!-- <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'> -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+<header class="header-fixed">
+
+	<div class="header-limiter">
+
+		<h1><a href="#">Bricks & Mortar</a></h1>
+
+		<nav>
+			<a href="#" class="selected">HOME</a>
+			<a href="about.html">ABOUT</a>
+			<a href="#" class="">BLOG</a>
+			<a href="#">PRICING</a>
+			<a href="#">FAQ</a>
+			<a href="#">CONTACT</a>
+		</nav>
+
+	</div>
+
+</header>
+
+
+<div class="fluid-container">
+	
+	<div class="main-section">
+		<div class="welcome-container">
+			<p class="head-title">WELCOME TO B&M</p>
+			<p class="description">Nunc laoreet ac neque mattis efficitur. In eu lacus erat. Ut tincidunt luctus</p>
+			<p class="description">sapien, sed fermentum eros malesuada dignissim. Maecenas id ligula nisl.</p>
+			<p class="description">Curabitur a justo leo.</p>
+			<a class="learn-more">LEARN MORE</a>
+		</div>
+	</div>
+	<div class="work-section">
+			<h2>WORK</h2>
+			
+	</div>
+</div>
+
+<footer>
+	<p>© 2016 Areo. All rights reserved.</p>
+	<a><i class="fa fa-facebook"></i></a>
+	<a><i class="fa fa-twitter"></i></a>
+	<a><i class="fa fa-google-plus"></i></a>
+	<a><i class="fa fa-pinterest"></i></a>
+	<a><i class="fa fa-instagram"></i></a>
+</footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+
+	$(document).ready(function(){
+
+		var showHeaderAt = 150;
+
+		var win = $(window),
+				body = $('body');
+
+		// Show the fixed header only on larger screen devices
+
+		if(win.width() > 600){
+
+			// When we scroll more than 150px down, we set the
+			// "fixed" class on the body element.
+
+			win.on('scroll', function(e){
+
+				if(win.scrollTop() > showHeaderAt) {
+					body.addClass('fixed');
+				}
+				else {
+					body.removeClass('fixed');
+				}
+			});
+
+		}
+
+	});
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Bricks & Mortar</title>
+
+	<link rel="stylesheet" href="assets/main.css">
+	<link rel="stylesheet" href="assets/header-fixed.css">
+	<link rel="stylesheet" href="assets/flexslider.css">
+	<!-- <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'> -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+<header class="header-fixed">
+
+	<div class="header-limiter">
+
+		<h1><a href="#">Bricks & Mortar</a></h1>
+
+		<nav>
+			<a href="index.html" >HOME</a>
+			<a href="#" class="selected">ABOUT</a>
+			<a href="work.html">WORK</a>
+			<a href="contact.html">CONTACT</a>
+		</nav>
+
+	</div>
+
+</header>
+
+
+<div class="fluid-container about">
+	<div class="main-section">
+		<div class="about-container">
+			<p class="head-title">ABOUT US</p>
+			<p class="description">We are the best in the market.</p>
+		</div>
+	</div>
+	<div class="service-section">
+			<div class="row">
+				<div class="col-xs-4">
+					<p class="serv-title">HOUSE CONSTRUCTION</p>
+					<p>From the first brick to the final finishing touches, we take care to build your home to the highest<br> possible standard.
+					</p>
+				</div>
+				<div class="col-xs-4">
+					<p class="serv-title">Unique Design</p>
+					<p>We are dedicated to building quality new homes with you in mind. We make sure that your home is<br> strong and beautiful.
+					</p>
+				</div>
+				<div class="col-xs-4">
+					<p class="serv-title">COMPETITIVE PRICING</p>
+					<p>We are not regular constructors. We know how hard you earned and want to make most out of it.
+					</p>
+				</div>
+			</div>
+	</div>
+	<div class="service-section">
+			<div class="row">
+				<div class="col-xs-12">
+					<h3 class="sec-title">WHO WE ARE</h3>
+					<p class="sec-desc">Meet our team</p>
+				</div>
+				<div class="col-xs-4">
+					<div class="img"></div>
+				</div>
+				<div class="col-xs-4">
+					<div class="img"></div>
+				</div>
+				<div class="col-xs-4">
+					<div class="img"></div>
+				</div>
+			</div>
+	</div>
+	<div class="client-section">
+			<div class="row">
+				<div class="col-xs-12">
+					<h3 class="sec-title">CLIENTS</h3>
+					<p class="sec-desc">What they say</p>
+				</div>
+				<div class="col-xs-12">
+					<div class="clients-feedback">
+						<div class="flexslider">
+						  <ul class="slides">
+						    <li>
+						      Communication is key to a well run project and B&M is a star in this area. They constantly keep us updated and informed in all areas. I cannot say enough about the professional staff we have been associated with. All B&M employees know <br>exactly what their tasks are and perform them well with a great attitude.”
+								<br><br>
+								Majid / Nigeria
+						    </li>
+						    <li>
+						      Bricks and Mortar completed this project on time and under budget. The professionalism and attention to detail was outstanding! I am proud and pleased to recommend the B&M team to anyone who is ready to build. From the design, preconstruction, permitting and planning they are always ready to give you the best!
+								<br><br>
+								Nur / Pakistan
+						    </li>
+						    <li>
+						      I think the best test on any project is whether or not you would hire the contractor again. We recently closed on another house in I-14 and the first contractor we thought of for the job was Bricks and Mortar.
+								<br><br>
+								Amjad / Nigeria
+						    </li>
+						    
+						  </ul>
+						</div>
+					</div>
+					<!-- <div id="slideshow">
+					   <div>
+					     	
+					   </div>
+					   <div>
+					        
+					   </div>
+					   <div>
+					        
+					   </div>
+					</div> -->
+				</div>
+			</div>
+	</div>
+</div>
+
+<footer>
+	<p>© 2016 Areo. All rights reserved.</p>
+	<a><i class="fa fa-facebook"></i></a>
+	<a><i class="fa fa-twitter"></i></a>
+	<a><i class="fa fa-google-plus"></i></a>
+	<a><i class="fa fa-pinterest"></i></a>
+	<a><i class="fa fa-instagram"></i></a>
+</footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="assets/js/jquery.flexslider-min.js"></script>
+
+<script>
+
+
+
+	$(document).ready(function(){
+
+		var showHeaderAt = 150;
+
+		var win = $(window),
+				body = $('body');
+
+		// Show the fixed header only on larger screen devices
+
+		if(win.width() > 600){
+
+			// When we scroll more than 150px down, we set the
+			// "fixed" class on the body element.
+
+			win.on('scroll', function(e){
+
+				if(win.scrollTop() > showHeaderAt) {
+					body.addClass('fixed');
+				}
+				else {
+					body.removeClass('fixed');
+				}
+			});
+
+		}
+
+		$("#slideshow > div:gt(0)").hide();
+
+		setInterval(function() {
+		  $('#slideshow > div:first')
+		    .fadeOut(1000)
+		    .next()
+		    .fadeIn(1000)
+		    .end()
+		    .appendTo('#slideshow');
+		}, 3000);
+
+		//$(window).load(function() {
+		  $('.flexslider').flexslider({
+		    animation: "slide",
+		    controlNav: true,
+		    directionNav: false
+		    // animationLoop: false,
+		    // slideshow: false,
+		    // sync: "#carousel"
+		  });
+		//});
+
+	});
+
+</script>
+
+</body>
+
+</html>

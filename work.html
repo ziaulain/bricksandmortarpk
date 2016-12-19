@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Bricks & Mortar</title>
+
+	<link rel="stylesheet" href="assets/main.css">
+	<link rel="stylesheet" href="assets/header-fixed.css">
+	<link rel="stylesheet" href="assets/flexslider.css">
+	<!-- <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'> -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+<header class="header-fixed">
+
+	<div class="header-limiter">
+
+		<h1><a href="#">Bricks & Mortar</a></h1>
+
+		<nav>
+			<a href="index.html" >HOME</a>
+			<a href="about.html">ABOUT</a>
+			<a href="#" class="selected">WORK</a>
+			<a href="contact.html">CONTACT</a>
+		</nav>
+
+	</div>
+
+</header>
+
+
+<div class="fluid-container about">
+	<div class="main-section">
+		<div class="about-container">
+			<p class="head-title">WORK</p>
+			<p class="description">We love making things beautiful for you.</p>
+		</div>
+	</div>
+	<div class="row work-section">
+		<br><br>
+		<br><br>
+		<div class="col-xs-8">
+			<div class="col-xs-6 reduce-padding-left">
+				<img class="img-anim" src="images/product4.jpg" width="100%"/>
+				
+			</div>
+			<div class="col-xs-6 reduce-padding-right">
+				<img class="img-anim" src="images/product3.jpg" width="100%"/>
+				
+			</div>
+			<img class="portfolio-img img-anim" src="images/product2.jpg" width="100%"/>
+		</div>
+		<div class="col-xs-4">
+			<img class="img-anim" src="images/product13.jpg" width="100%"/>
+			<!-- <img class="portfolio-img" src="images/product15.jpg" width="100%"/> -->
+		</div>
+		<div class="col-xs-4">
+			<img class="portfolio-img img-anim" src="images/product5.jpg" width="100%"/>
+			<img class="portfolio-img img-anim" src="images/product14.jpg" width="100%"/>
+		</div>
+		
+		<div class="col-xs-4">
+			<img class="portfolio-img img-anim" src="images/product7.jpg" width="100%"/>
+			<img class="portfolio-img img-anim" src="images/product8.jpg" width="100%"/>
+			<img class="portfolio-img img-anim" src="images/product10.jpg" width="100%"/>
+			<!-- <img class="portfolio-img" src="images/product15.jpg" width="100%"/> -->
+		</div>
+		<div class="col-xs-4">
+			<img class="portfolio-img img-anim" src="images/product6.jpg" width="100%"/>
+			<img class="portfolio-img img-anim" src="images/product15.jpg" width="100%"/>
+			<!-- <img class="portfolio-img" src="images/product15.jpg" width="100%"/> -->
+		</div>
+			<!-- <div class="col-xs-12">
+				<img src="images/product10.jpg" width="100%"/>
+				
+			</div>
+ -->
+			
+	</div>
+</div>
+
+<footer>
+	<p>© 2016 Areo. All rights reserved.</p>
+	<a><i class="fa fa-facebook"></i></a>
+	<a><i class="fa fa-twitter"></i></a>
+	<a><i class="fa fa-google-plus"></i></a>
+	<a><i class="fa fa-pinterest"></i></a>
+	<a><i class="fa fa-instagram"></i></a>
+</footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="assets/js/jquery.flexslider-min.js"></script>
+
+<script>
+
+
+
+	$(document).ready(function(){
+
+		var showHeaderAt = 150;
+
+		var win = $(window),
+				body = $('body');
+
+		// Show the fixed header only on larger screen devices
+
+		if(win.width() > 600){
+
+			// When we scroll more than 150px down, we set the
+			// "fixed" class on the body element.
+
+			win.on('scroll', function(e){
+
+				if(win.scrollTop() > showHeaderAt) {
+					body.addClass('fixed');
+				}
+				else {
+					body.removeClass('fixed');
+				}
+			});
+
+		}
+
+		$("#slideshow > div:gt(0)").hide();
+
+		setInterval(function() {
+		  $('#slideshow > div:first')
+		    .fadeOut(1000)
+		    .next()
+		    .fadeIn(1000)
+		    .end()
+		    .appendTo('#slideshow');
+		}, 3000);
+
+		//$(window).load(function() {
+		  $('.flexslider').flexslider({
+		    animation: "slide",
+		    controlNav: true,
+		    directionNav: false
+		    // animationLoop: false,
+		    // slideshow: false,
+		    // sync: "#carousel"
+		  });
+		//});
+
+	});
+
+</script>
+
+</body>
+
+</html>

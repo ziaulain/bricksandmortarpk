@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Bricks & Mortar</title>
+
+	<link rel="stylesheet" href="assets/main.css">
+	<link rel="stylesheet" href="assets/header-fixed.css">
+	<link rel="stylesheet" href="assets/flexslider.css">
+	<!-- <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'> -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+<header class="header-fixed">
+
+	<div class="header-limiter">
+
+		<h1><a href="#">Bricks & Mortar</a></h1>
+
+		<nav>
+			<a href="index.html" >HOME</a>
+			<a href="about.html">ABOUT</a>
+			<a href="work.html">WORK</a>
+			<a href="contact.html" class="selected">CONTACT</a>
+		</nav>
+
+	</div>
+
+</header>
+
+
+<div class="fluid-container about">
+	<div class="main-section">
+		<div class="about-container">
+			<p class="head-title">CONTACT</p>
+			<p class="description">Get in touch</p>
+		</div>
+	</div>
+	<div class="contact-section">
+			<div class="row">
+				<h3 class="col-xs-12">WHY US?</h3>
+				<div class="col-xs-8">
+					<div class="col-xs-12">
+						<p class="serv-title col-xs-12 text-center">why choose B&M?</p>
+						<p class="col-xs-12">We hope that we can build you the home of your dreams. But aside from the fact that we could offer you the perfect home built in your ideal location, we’d like to think that there are some other reasons why choosing B&M pk is the right thing to do.<br><br>
+						</p>
+						<p class="col-xs-12"><b>Here's why we think you should choose us...</b><br><br>
+						We work hard to ensure that your new home is of a high quality and is built safely, efficiently and cost effectively. We are not investers. We are workers as you are and we know how hard you earned it and you want most out of it.<br> 
+						</p>	
+
+						<p class="serv-title col-xs-12 text-center">Where you should start?</p>
+						<p class="col-xs-12">Whether you're a first time builder taking that exciting first step onto the property ladder - or you own a home already but you're looking to move, making a new home is bound to take up a lot of your time and energy.
+						</p>
+						<p class="col-xs-12">
+						We know that the home buying or construction process can seem like a complicated and daunting prospect, so we're always looking for ways of making things easier for you. We hope that our comprehensive services help make the process of constructing a home as easy as possible.</p>
+
+						<p class="serv-title col-xs-12 text-center"><br><br>WHat area is right for you?</p>
+						<p class="col-xs-12">We compile detailed area information to help you decide where to live. Points of interest are plotted on a helpful map and include transport, education, healthcare and shops.
+						</p>		
+					</div>
+				</div>
+				<div class="col-xs-4">
+					<p class="serv-title email-heading">Contact info</p>
+					<p>Just send us an email or give us a call. We will set a time which suits you and we will be there at your place.</p>
+					<p>Email : bricksandmortarpk@gmail.com</p>
+					<p>Phone : +92-323-5200545</p>
+					
+				</div>
+			</div>
+	</div>
+</div>
+
+<footer>
+	<p>© 2016 Areo. All rights reserved.</p>
+	<a><i class="fa fa-facebook"></i></a>
+	<a><i class="fa fa-twitter"></i></a>
+	<a><i class="fa fa-google-plus"></i></a>
+	<a><i class="fa fa-pinterest"></i></a>
+	<a><i class="fa fa-instagram"></i></a>
+</footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="assets/js/jquery.flexslider-min.js"></script>
+
+<script>
+
+
+
+	$(document).ready(function(){
+
+		var showHeaderAt = 150;
+
+		var win = $(window),
+				body = $('body');
+
+		// Show the fixed header only on larger screen devices
+
+		if(win.width() > 600){
+
+			// When we scroll more than 150px down, we set the
+			// "fixed" class on the body element.
+
+			win.on('scroll', function(e){
+
+				if(win.scrollTop() > showHeaderAt) {
+					body.addClass('fixed');
+				}
+				else {
+					body.removeClass('fixed');
+				}
+			});
+
+		}
+
+		$("#slideshow > div:gt(0)").hide();
+
+		setInterval(function() {
+		  $('#slideshow > div:first')
+		    .fadeOut(1000)
+		    .next()
+		    .fadeIn(1000)
+		    .end()
+		    .appendTo('#slideshow');
+		}, 3000);
+
+		//$(window).load(function() {
+		  $('.flexslider').flexslider({
+		    animation: "slide",
+		    controlNav: true,
+		    directionNav: false
+		    // animationLoop: false,
+		    // slideshow: false,
+		    // sync: "#carousel"
+		  });
+		//});
+
+	});
+
+</script>
+
+</body>
+
+</html>
